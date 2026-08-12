@@ -72,7 +72,7 @@ STEP 3 - CREATE THE PRIVATE ENDPOINT
 8. Wait until deployment shows:
       Deployment succeeded
 
-![STEP 3 - Create Private Endpoint](screenshots/02-create-private-endpoint.jpg)
+![Microsoft Entra administrator group](screenshots/AZURE-SQL-NewGroupCreated.png)
 
 RESULT:
 The SQL server has private connectivity through the lab VNet.
@@ -91,7 +91,7 @@ STEP 4 - DISABLE PUBLIC NETWORK ACCESS
 4. Select Save.
 5. Confirm Public network access is Disabled.
 
-![STEP 4 - Disable Public Network Access](screenshots/04-disable-public-access.jpg)
+![Private Endpoint creation](screenshots/AZURE-SQL-Create-Private-Endpoint.png)
 
 RESULT:
 The SQL server is no longer accessible through its public endpoint.
@@ -116,7 +116,7 @@ STEP 5 - ENABLE SQL AUDITING
 8. Confirm:
       Successfully saved server Auditing settings
 
-![STEP 5 - Enable SQL Auditing](screenshots/03-enable-sql-auditing.jpg)
+![SQL Auditing enabled](screenshots/AZURE-SQL-EnableSQLAuditing.png)
 
 RESULT:
 SQL database activity is sent to Log Analytics for monitoring
@@ -165,6 +165,8 @@ STEP 7 - DISABLE PUBLIC ACCESS AFTER THE TEST
       Public network access -> Disable
 4. Select Save.
 
+![Public network access disabled](screenshots/AZURE-SQL-PublicAccessDisabled.png)
+
 EXPECTED RESULT:
 The portal Query Editor can no longer connect.
 
@@ -200,7 +202,7 @@ AzureDiagnostics
 
       SELECT * FROM AiModelMetadata
 
-![STEP 8 - Verify SQL Audit Logs with KQL](screenshots/05-verify-audit-log-kql.jpg)
+![SQL audit log verification](screenshots/AZURE-SQL-VerifyAuditLog.png)
 
 EXPECTED RESULT:
 The SQL query appears in Log Analytics.
